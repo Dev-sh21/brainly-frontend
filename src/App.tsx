@@ -1,21 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from './components/ui/button'
-import { PlusIcon } from './icons/plusIcon'
+import { Button } from "./components/ui/button"
+import { Card } from "./components/ui/Card"
+import { PlusIcon } from "./icons/plusIcon"
+import { ShareIcon } from "./icons/ShareIcon"
 
 function App() {
-  const [count, setCount] = useState(0)
+  return <div className="p-4">
+    <div className="flex justify-end gap-4">
+         <Button variant="primary" text="Add content"startIcon={<PlusIcon/>}></Button>
+        <Button variant="secondary" text="Share Brain" startIcon={<ShareIcon/>}></Button>
+    </div>
+   <div className="flex">
 
-  return (
-    <>
-      <Button startIcon={<PlusIcon/>}size="sm" variant="primary" text="Share"/>
-      <Button size="md" variant="secondary" text="Add Content"/>
-      <Button size="lg" variant="secondary" text="Add Contents"/>
 
-    </>
-  )
+    
+
+   
+   <Card type="twitter" link="https://x.com/FabrizioRomano/status/2005304096778252426" 
+   title="First Tweet"/>
+    <Card type="youtube" link="https://www.youtube.com/watch?v=BSATK8sL4yw" 
+   title="First video"/>
+   </div>
+  
+  </div>
+  
 }
 
 export default App
